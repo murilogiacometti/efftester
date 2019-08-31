@@ -1,7 +1,15 @@
+TAGS=-tags "optimize(3)" #debug" 
+
 eff:
-	ocamlbuild -package qcheck src/efftester.cma
-	ocamlbuild -package qcheck src/effmain.byte
-	ocamlbuild -package qcheck src/effmain.native
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/env.cma
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/ast.cma
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/tcheck.cma
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/generator.cma
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/shrinker.cma
+	ocamlbuild -package qcheck -cflags -w,a $(TAGS) src/efftester.cma
+	ocamlbuild -package qcheck -package str -cflags -w,a $(TAGS) src/effmain.byte
+	ocamlbuild -package qcheck -package str -cflags -w,a $(TAGS) src/effmain.native
+
 
 stat:
 	ocamlbuild -package qcheck src/effstat.native

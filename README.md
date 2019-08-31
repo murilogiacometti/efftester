@@ -9,6 +9,14 @@ described in the paper:
 >  ICFP'17,
 >  [http://janmidtgaard.dk/papers/Midtgaard-al:ICFP17-full.pdf](http://janmidtgaard.dk/papers/Midtgaard-al%3aICFP17-full.pdf) (full version)
 
+It was later extended with exceptions as described in the
+dissertation:
+
+>  "Testing of OCaml exceptions by effect-driven generation of programs"
+>  Murilo Giacometti Rocha
+>  MSc Computer Science, Dissertation, 2019
+>  University of Edinburgh
+>  [https://drive.google.com/file/d/1_W7XO58aezVSDDrQBvZlO9Cv8QEtaoTe/view?usp=sharing]
 
 We suggest to generate programs following a dedicated type and effect
 system that determines whether a program has evaluation-order

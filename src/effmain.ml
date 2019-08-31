@@ -1,11 +1,12 @@
-open Efftester;;
+open Efftester
+open Ast
 
-resetvar();;
-resettypevar();;
-QCheck_runner.run_tests_main
-  [(* unify_funtest;*)
-   (* gen_classify; *)
-   (* ocaml_test; *)
-   (* tcheck_test; *)
-    eq_test 
-  ]
+;;
+reset_var ()
+
+;;
+reset_typevar ()
+
+;;
+let tests = [ (*unify_funtest; gen_classify; ocaml_test; *) tcheck_test (*eq_test*) ] in
+QCheck_runner.run_tests ~verbose:true tests
